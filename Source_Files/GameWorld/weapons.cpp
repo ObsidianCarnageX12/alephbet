@@ -542,7 +542,7 @@ void process_new_item_for_reloading(
 
 #define IDLE_PHASE_COUNT 1000 // doesn't matter
 #define CHARGED_WEAPON_OVERLOAD (60*TICKS_PER_SECOND)
-#define WEAPON_FORWARD_DISPLACEMENT (WORLD_ONE_FOURTH/2)
+#define WEAPON_FORWARD_DISPLACEMENT (WORLD_ONE_FOURTH*9)
 #define WEAPON_SHORTED_SOUND NONE
 
 /* Update the given player's weapons */
@@ -846,12 +846,13 @@ void update_player_weapons(
 	if(action_flags & _cycle_weapons_forward)
 	{
 		select_next_weapon(player_index, true);
+		select_next_weapon(player_index, false);
 	} 
 		
 	/* Cycle the weapon backward */
 	if(action_flags & _cycle_weapons_backward)
 	{
-		select_next_weapon(player_index, false);
+		select_next_weapon(player_index, true);
 	}
 
 	if (player->hotkey && player->hotkey < NUMBER_OF_WEAPONS)
@@ -1133,7 +1134,7 @@ bool get_weapon_display_information(
 				if (definition->flags & _weapon_is_marathon_1) {
 					// only add in bob height if we're firing
 					if (weapon->triggers[which_trigger].state == _weapon_idle && !automatic_still_firing(player_index, which_trigger)) {
-						calculate_weapon_position_for_idle(player_index, which_trigger, weapon->weapon_type, &height, &width, false);
+						calculate_weapon_position_for_idle(player_index, which_trigger, weapon->weapon_type, &height+1, &width+1, false);
 					}
 				}
 				else
@@ -1146,13 +1147,13 @@ bool get_weapon_display_information(
 				{
 					case _weapon_lowering:
 						assert(definition->ready_ticks);
-						height = (3*FIXED_ONE/2)-(((3*FIXED_ONE/2)-definition->idle_height)*phase)/definition->ready_ticks;
+						height = (1*FIXED_ONE/2)-(((2*FIXED_ONE/2)-definition->idle_height)*phase)/definition->ready_ticks;
 						shape_index= definition->idle_shape;
 						break;
 			
 					case _weapon_raising:
 						assert(definition->ready_ticks);
-						height += (((3*FIXED_ONE/2)-definition->idle_height)*phase)/definition->ready_ticks;
+						height += (((1*FIXED_ONE/2)-definition->idle_height)*phase)/definition->ready_ticks;
 						shape_index= definition->idle_shape;
 						break;
 			
@@ -1231,10 +1232,10 @@ bool get_weapon_display_information(
 							if(which_trigger==_primary_weapon)
 							{
 								width-= ((weapon->triggers[which_trigger].phase)
-									*(PISTOL_SEPARATION_WIDTH/2))/definition->ready_ticks;
+									*(PISTOL_SEPARATION_WIDTH+1*2))/definition->ready_ticks;
 							} else {
 								width+= ((weapon->triggers[which_trigger].phase)
-									*(PISTOL_SEPARATION_WIDTH/2))/definition->ready_ticks;
+									*(PISTOL_SEPARATION_WIDTH+1*2))/definition->ready_ticks;
 							}
 						} else {
 							/* Melee weapons stay where they were. */

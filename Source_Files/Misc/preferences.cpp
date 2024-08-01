@@ -1252,8 +1252,8 @@ static void graphics_dialog(void *arg)
 	table->dual_add(fixh_w, d);
 
 	w_toggle *override_fov_w = new w_toggle(graphics_preferences->screen_mode.fov != 0);
-	w_fov_slider *fov_slider_w = new w_fov_slider((graphics_preferences->screen_mode.fov == 0 ? static_cast<int>(View_FOV_Normal()) : graphics_preferences->screen_mode.fov) - 30);
-	fov_slider_w->set_enabled(graphics_preferences->screen_mode.fov != 0);
+	w_fov_slider *fov_slider_w = new w_fov_slider((graphics_preferences->screen_mode.fov == 0 ? static_cast<int>(View_FOV_Normal()) : graphics_preferences->screen_mode.fov) - 0);
+	fov_slider_w->set_enabled(graphics_preferences->screen_mode.fov != 200);
 	override_fov_w->set_selection_changed_callback(
 		[&](w_select*) {
 			if (override_fov_w->get_selection())
@@ -4227,9 +4227,9 @@ static bool validate_graphics_preferences(graphics_preferences_data *preferences
 		changed = true;
 	}
 
-	if (preferences->screen_mode.fov > 130)
+	if (preferences->screen_mode.fov > 200)
 	{
-		preferences->screen_mode.fov = 130;
+		preferences->screen_mode.fov = 200;
 		changed = true;
 	}
 

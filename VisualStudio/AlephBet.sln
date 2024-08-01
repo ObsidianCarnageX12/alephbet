@@ -11,8 +11,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua", "Lua\Lua.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{7FA2F95C-F6E9-4A89-BBD2-AF1D5B09B0B2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steamshim", "Steamshim\Steamshim.vcxproj", "{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -125,30 +123,6 @@ Global
 		{7FA2F95C-F6E9-4A89-BBD2-AF1D5B09B0B2}.Steam Marathon|x64.Build.0 = Release|x64
 		{7FA2F95C-F6E9-4A89-BBD2-AF1D5B09B0B2}.Steam Marathon|x86.ActiveCfg = Release|Win32
 		{7FA2F95C-F6E9-4A89-BBD2-AF1D5B09B0B2}.Steam Marathon|x86.Build.0 = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Debug|x64.ActiveCfg = Debug|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Debug|x64.Build.0 = Debug|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Debug|x86.ActiveCfg = Debug|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Debug|x86.Build.0 = Debug|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon 2|x64.ActiveCfg = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon 2|x64.Build.0 = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon 2|x86.ActiveCfg = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon 2|x86.Build.0 = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon Infinity|x64.ActiveCfg = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon Infinity|x64.Build.0 = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon Infinity|x86.ActiveCfg = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon Infinity|x86.Build.0 = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon|x64.ActiveCfg = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon|x64.Build.0 = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon|x86.ActiveCfg = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Marathon|x86.Build.0 = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Release|x64.ActiveCfg = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Release|x64.Build.0 = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Release|x86.ActiveCfg = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Release|x86.Build.0 = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Steam Marathon|x64.ActiveCfg = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Steam Marathon|x64.Build.0 = Release|x64
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Steam Marathon|x86.ActiveCfg = Release|Win32
-		{242043EF-8A1F-4BB3-82B1-B848B8AE6BE6}.Steam Marathon|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

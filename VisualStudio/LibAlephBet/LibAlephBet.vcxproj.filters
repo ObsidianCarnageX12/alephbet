@@ -718,9 +718,6 @@
     <ClCompile Include="..\..\Source_Files\Lua\lua_music.cpp">
       <Filter>Lua\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source_Files\Misc\steamshim_child.c">
-      <Filter>Misc\Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source_Files\CSeries\BStream.h">
